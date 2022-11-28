@@ -72,10 +72,13 @@ public class MainBattleSeq {
     }
 
     public void mainSequence(String enemyName, Enemy constructor){
-        for (int count = 1; ep.getEnemyHealth() >= 0; count++) {
+        for (int count = 1; ep.getEnemyHealth() >= 0 || new Reese().getReeseHealth() >= 0; count++) {
             constructor.display();
-            if (ep.getEnemyHealth() >= 0){
+            if (ep.getEnemyHealth() <= 0 ){
                 System.out.println("\nYou won against " + enemyName);
+                break;
+            } else if (new Reese().getReeseHealth() <= 0){
+                System.out.println("\nYou lost against " + enemyName);
                 break;
             }
             sf.pause(2000);

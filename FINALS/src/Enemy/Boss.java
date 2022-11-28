@@ -12,10 +12,10 @@ public class Boss extends Enemy{
         BossHealth = 100;
         BossAttack = 20;
         BossDefense = 15;
-        super.enemyName = bb;
-        super.enemyHealth = BossHealth;
-        super.enemyAttack = BossAttack;
-        super.enemyDefense = BossDefense;
+        super.enemyName = this.bb;
+        super.enemyHealth = this.BossHealth;
+        super.enemyAttack = this.BossAttack;
+        super.enemyDefense = this.BossDefense;
     }
 
     @Override
@@ -65,5 +65,9 @@ public class Boss extends Enemy{
     @Override
     public void display() {
         super.display();
+        System.out.println("\nEnemy Stats: ");
+        System.out.println("Health: " + getEnemyHealth());
+        System.out.println("Attack: " + getEnemyAttack());
+        System.out.println("Defense: " + getEnemyDefense());
     }
 }

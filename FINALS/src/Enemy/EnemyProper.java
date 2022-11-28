@@ -10,7 +10,7 @@ public class EnemyProper extends Enemy{
         this.enemyHealth = 10;
         this.enemyAttack = 2;
         this.enemyDefense = 1;
-        super.enemyName = enemies[new Random().nextInt(enemies.length)];
+        super.enemyName = this.enemies[new Random().nextInt(enemies.length)];
         super.enemyDefense = this.enemyDefense;
         super.enemyAttack = this.enemyAttack;
         super.enemyHealth = this.enemyHealth;
