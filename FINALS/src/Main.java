@@ -1,10 +1,8 @@
 //IMPORTING CLASSES//
-import Story.*;
-//IMPORTING LIBRARIES OF JAVA//
-
+import Game.*;
 public class Main {
     public static void main(String[] args) {
         //INITIALIZES THE GAME
-        new Story().story();
+        GameLogic.game();
     }
 }
